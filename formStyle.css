@@ -1,0 +1,131 @@
+
+* {
+     margin: 0;
+     padding: 0;
+     font-family: 'Ubuntu', sans-serif;
+     box-sizing: border-box;
+     text-decoration: none;
+}
+body {
+     background-color: #4158D0;
+     background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);     
+     background-repeat: no-repeat;
+     background-size: 100% 100%;
+     background-attachment: fixed;
+}
+
+h2 {
+     text-align: center;
+     color: #4158D0;
+     font-size: 33px;
+     padding-top: 20px;
+     padding-bottom: 20px;
+     animation-name: pulse;
+     animation-iteration-count: infinite;
+     animation-duration: 4s;
+     position: relative;
+     top: 10px;
+}
+h2::after {
+     content: "";
+     position: absolute;
+     border-bottom: 3px solid #4158D0;
+     border-right: 3px solid #4158D0;
+     width: 40px;
+     height: 40px;
+     top: 25px;
+     right: 120px;
+}
+h2::before {
+     content: "";
+     position: absolute;
+     border-top: 3px solid #4158D0;
+     border-left: 3px solid #4158D0;
+     width: 40px;
+     height: 40px;
+     top: 10px;
+     left: 120px;
+}
+
+.container {
+     display: flex;
+     flex-direction: column;
+     flex: 0 0 100%;
+     width: 35%;
+     margin: auto;
+     margin-top: 45px;
+     border-radius: 15px;
+     box-shadow: 0 5px 25px rgba(1 1 1 / 40%);
+     height: 100%;
+     background-color: azure;
+     text-align: center;
+     margin-bottom: 50px;
+}
+form {
+     text-align: center;
+}
+input[type=file],
+input[type=number],
+input[type=text],
+input[type=password],
+input[type=email],
+input[type=tel] {
+     width: 70%;
+     height: 40px;
+     border: 0;
+     background-color: azure;
+     border-bottom: 1px solid black;
+     border-radius: 5px;
+     margin: 30px 30px 20px 10px;
+}
+
+input[type=file]::-webkit-file-upload-button {
+     color: white;
+     outline: 0;
+     border: 0;
+     margin-left: 20px;
+     width: 150px;
+     height: 30px;
+     border-radius: 5px;
+     background-color: black;
+}
+
+input:focus{
+     outline:0;
+}
+
+/* .container>a {
+     display: inline-block;
+     width: 70%;
+     height: 50px;
+     color: #FFF;
+     background-color: #4158D0;
+     margin-top: 25px;
+     line-height: 50px;
+     border-radius: 13px;
+     font-size: 22px;
+     transition: 0.6s ease;
+}
+.container>a:hover {
+     transform: scale(1.1);
+     font-weight: 900;
+} */
+label {
+     font-size: 19px;
+}
+
+input[type=submit] {
+     width: 50%;
+     height: 50px;
+     margin: 30px;
+     border: 0;
+     background-color: #4158D0;
+     font-size: 18px;
+     border-radius: 5px;
+     color: white;
+     transition: 0.5s ease-in-out;
+     font-weight: 800;
+}
+input[type=submit]:hover {
+     transform: scale(1.1);
+}

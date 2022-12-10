@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <title>Form</title>
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <link rel="stylesheet" href="formStyle.css">
+     <script src="main.js"></script>
+</head>
+<body>
+     <div class="container">
+               <h2> SignUp Form </h2>
+          <form name="myForm" onsubmit="return formValidator()">
+               <label for=""><i class="fa-solid fa-user"></i></label>
+               <input id="username" type="text" name="userName" autofocus placeholder="Enter Username" required>
+               <br>
+               <label for=""><i class="fa-solid fa-envelope"></i></label>
+               <input id="email1" type="email" placeholder="Enter Email" required onkeyup="checkEmail(this)">
+               <p style="display: none;" id="emailMsg"></p>
+               <br>
+               <label for=""><i class="fa-solid fa-envelope"></i></label>
+               <input id="email2" type="email" placeholder="Confirm Email" required onblur="emailsMatch()">
+               <p style="display: none;" id="emailMatching"></p>
+               <br>
+               <label for=""><i class="fa-solid fa-phone"></i></i></label>
+               <input id ="phoneNumber" type="tel" required placeholder="Enter Your Phone Number" onkeyup="phoneNUM(this)">
+               <p id="phoneP" style="display: none;"></p>
+               <br>
+               <label for=""><i class="fa-solid fa-lock"></i></label>
+               <input id="pass" type="password" required placeholder="Enter strong password" onkeyup="checkPassword(this)">
+               <p id="strenghtMsg" style="display: none;"></p>
+               <br>
+               <label for=""><i class="fa-solid fa-arrow-down-wide-short"></i><label>
+               <input id="counter" type="number" name="" placeholder="Enter Number From 1 to 20" required max="20" min="1" maxlength="2" onkeyup="counterBlocker()">
+               <p id="counterMsg" style="display: none;"></p>
+               <br>
+               <label for="FileUploader"><i class="fa-solid fa-file"></i></label>
+               <!-- multiple -->
+               <input id="FileUploader" onchange="CheckFileSize(this);" type="file" accept=".pdf,.png,.jpg,.jpeg,.gif,.docx, .xlsx" required/>
+               <p id="FileError"></p>
+               <input type="submit" value="SignUp">
+          </form>
+     </div>
+</body>
+</html>
